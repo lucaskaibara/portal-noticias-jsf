@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Página Inicial</title>
+
+	<link rel="stylesheet" type="text/css" href="resources/css/estilo.css" />
+</h:head>
+
+<h:body class="body">
+
+	<div class="topo">
+
+		<h2>Portal de Notícias</h2>
+
+	</div>
+
+	<div class="menu">
+
+		<p:menubar>
+			<p:menuitem value="Home" url="index.xhtml" />
+		</p:menubar>
+
+	</div>
+
+	<div class="corpo">
+
+		<h2>Página Inicial</h2>
+
+		<div class="noticias">
+
+			<p:dataGrid var="noticia" value="#{noticiaView.listaNot}" columns="2"
+				layout="grid" rows="12" paginator="true"
+				emptyMessage="Não há notícias cadastradas."
+				paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+				rowsPerPageTemplate="10,20,50">
+
+				<f:facet name="header">
+					Principais Notícias
+		        </f:facet>
+
+				<p:panel header="#{noticia.tituloNoticia}" style="text-align:center">
+					<h:panelGrid columns="1" style="width:100%">
+
+						<h:outputText value="#{noticia.materia}" />
+
+						<br />
+
+						<p:button outcome="noticia" value="Ler Mais">
+							<f:param name="codNot" value="#{noticia.codNot}" />
+						</p:button>
+					</h:panelGrid>
+				</p:panel>
+
+			</p:dataGrid>
+
+		</div>
+
+	</div>
+
+	<div class="rodape">
+
+		<p class="rodape">
+			Trabalho de Avaliação para a disciplina de Desenvolvimento de
+			Sistemas com Java<br /> Desenvolvido por Lucas Kaibara e Gustavo
+			Alves
+		</p>
+
+	</div>
+
+</h:body>
+</html>

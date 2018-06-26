@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Página de Login</title>
+
+	<link rel="stylesheet" type="text/css" href="../resources/css/estilo.css" />
+</h:head>
+
+<h:body class="body">
+
+	<div class="topo">
+
+		<h2>Portal de Notícias - Painel de Controle</h2>
+
+	</div>
+
+	<div class="menu">
+
+		<p:menubar>
+			<p:menuitem value="Página de Login" url="login.xhtml" />
+		</p:menubar>
+
+	</div>
+
+	<div class="corpo">
+
+		<h:form class="formulario">
+
+			<h2>Página de Login</h2>
+
+			<div class="mensagens">
+				<p:messages id="messages" closable="true" />
+			</div>
+
+			<p class="form-label">Email:</p>
+			<p:inputText id="txtEmail" placeholder="Digite o email"
+				value="#{administradorView.email}" />
+	
+			<br />
+	
+			<p class="form-label">Senha:</p>
+			<p:password id="txtSenha" placeholder="Digite a senha"
+				value="#{administradorView.senha}" />
+
+			<br /><br />
+
+			<p:commandButton value="Entrar" id="btnEntrar"
+				actionListener="#{administradorView.btnLogarAdm}" ajax="false" />
+
+		</h:form>
+
+	</div>
+
+	<div class="rodape">
+
+		<p class="rodape">
+			Trabalho de Avaliação para a disciplina de Desenvolvimento de Sistemas com Java<br />
+			Desenvolvido por Lucas Kaibara e Gustavo Alves
+		</p>
+
+	</div>
+
+</h:body>
+</html>

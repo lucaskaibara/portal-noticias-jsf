@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Página da Notícia - #{noticiaView.tituloNoticia}</title>
+
+	<link rel="stylesheet" type="text/css" href="resources/css/estilo.css" />
+</h:head>
+
+<h:body class="body">
+
+	<div class="topo">
+
+		<h2>Portal de Notícias</h2>
+
+	</div>
+
+	<div class="menu">
+
+		<p:menubar>
+			<p:menuitem value="Home" url="index.xhtml" />
+		</p:menubar>
+
+	</div>
+
+	<div class="corpo">
+
+		<h2>Página de Notícia</h2>
+		
+		<div class="noticias">
+
+			<h2>#{noticiaView.tituloNoticia}</h2>
+			
+			<p>#{noticiaView.materia}</p>
+			
+		</div>
+
+	</div>
+
+	<div class="rodape">
+
+		<p class="rodape">
+			Trabalho de Avaliação para a disciplina de Desenvolvimento de
+			Sistemas com Java<br /> Desenvolvido por Lucas Kaibara e Gustavo
+			Alves
+		</p>
+
+	</div>
+
+</h:body>
+</html>

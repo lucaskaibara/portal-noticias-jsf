@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Cadastro de Administrador</title>
+
+	<link rel="stylesheet" type="text/css" href="../resources/css/estilo.css" />
+</h:head>
+
+<h:body class="body">
+
+	<div class="topo">
+
+		<h2>Portal de Notícias - Painel de Controle</h2>
+
+	</div>
+
+	<div class="menu">
+
+		<p:menubar>
+			<p:menuitem value="Home" url="index.xhtml" />
+			<p:menuitem value="Cad. Adm." url="cadastroAdministrador.xhtml" />
+			<p:menuitem value="Ger. Adm." url="gerenciarAdministradores.xhtml" />
+			<p:menuitem value="Cad. Categoria" url="cadastroCategoria.xhtml" />
+			<p:menuitem value="Ger. Categorias" url="gerenciarCategorias.xhtml" />
+			<p:menuitem value="Cad. Notícia" url="cadastroNoticia.xhtml" />
+			<p:menuitem value="Ger. Notícias" url="gerenciarNoticias.xhtml" />
+
+			<f:facet name="options">
+				<p:button value="Sair" outcome="login"></p:button>
+			</f:facet>
+		</p:menubar>
+
+	</div>
+
+	<div class="corpo">
+
+		<h:form class="formulario">
+
+			<h2>Cadastro de Administrador</h2>
+
+			<div class="mensagens">
+				<p:messages id="messages" closable="true" />
+			</div>
+
+			<p class="form-label">Nome Completo:</p>
+			<p:inputText id="txtNomeCompleto"
+				placeholder="Digite o nome completo"
+				value="#{administradorView.nomeCompleto}" />
+
+			<br />
+			
+			<p class="form-label">Email:</p>
+			<p:inputText id="txtEmail" placeholder="Digite o email"
+				value="#{administradorView.email}" />
+
+			<br />
+
+			<p class="form-label">Senha:</p>
+			<p:password id="txtSenha" placeholder="Digite a senha"
+				promptLabel="Por favor, digite a senha do administrador"
+				value="#{administradorView.senha}" feedback="true" weakLabel="Fraco"
+				goodLabel="Médio" strongLabel="Forte" />
+
+			<br /><br />
+
+			<p:commandButton value="Salvar" id="btnSalvar"
+				actionListener="#{administradorView.btnSalvarAdm}" ajax="false" />
+
+		</h:form>
+
+	</div>
+
+	<div class="rodape">
+
+		<p class="rodape">
+			Trabalho de Avaliação para a disciplina de Desenvolvimento de Sistemas com Java<br />
+			Desenvolvido por Lucas Kaibara e Gustavo Alves
+		</p>
+
+	</div>
+
+</h:body>
+</html>

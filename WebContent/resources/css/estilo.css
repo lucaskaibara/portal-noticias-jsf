@@ -1,0 +1,52 @@
+body {
+	background: #ccc;
+	margin: 0 auto;	
+}
+
+div.topo, div.corpo, div.rodape, div.menu {
+	width: 85vw;
+	margin: 0vw 7.5vw;
+}
+
+div.topo, div.corpo, div.rodape {
+	padding: 20px 0px;
+}
+
+div.topo, div.rodape {
+	background: #000;
+}
+
+div.corpo {
+	background: #fff;
+}
+
+div.mensagens, div.tabela, div.noticias {
+	margin: 0vw 5vw;
+}
+
+h2, p {
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+div.topo > h2, div.rodape > h2 {
+	color: #fff;
+}
+
+.formulario, h2, p {
+	text-align: center;
+}
+
+p.form-label {
+	font-weight: bold;
+}
+
+p.rodape {
+	color: #fff;
+	font-size: 18px;
+	line-height: 30px;
+}
+
+div.atalhos-index {
+	display: flex;
+	justify-content: center;
+}
